@@ -4,18 +4,21 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    color: #333;
 }
 
 header {
-    background-color: #333;
+    background-color: burlywood;
     color: #fff;
     padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header nav ul {
     list-style: none;
     padding: 0;
-    text-align: center;
+    text-align: right;
+    margin: 0;
 }
 
 header nav ul li {
@@ -27,6 +30,7 @@ header nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    transition: text-decoration 0.3s;
 }
 
 header nav ul li a:hover {
@@ -36,7 +40,7 @@ header nav ul li a:hover {
 main {
     padding: 2rem;
     max-width: 800px;
-    margin: auto;
+    margin: 2rem auto;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     border-radius: 8px;
@@ -45,6 +49,7 @@ main {
 main img {
     max-width: 100%;
     border-radius: 8px;
+    margin-bottom: 1rem;
 }
 
 main .posts,
@@ -66,6 +71,11 @@ main .bottom-sec {
 .other-posts img {
     max-width: 100%;
     border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.other-posts img:hover {
+    transform: scale(1.05);
 }
 
 .footer-container {
@@ -73,11 +83,13 @@ main .bottom-sec {
     color: #fff;
     text-align: center;
     padding: 1rem;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .footer-container ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .footer-container ul li {
@@ -88,6 +100,7 @@ main .bottom-sec {
 .footer-container ul li a {
     color: #fff;
     text-decoration: none;
+    transition: text-decoration 0.3s;
 }
 
 .footer-container ul li a:hover {
@@ -125,6 +138,7 @@ main .bottom-sec {
     text-align: left;
     width: 150px;
 }
+
 .share-options:hover .share-links {
     display: block;
 }
@@ -135,6 +149,7 @@ main .bottom-sec {
     color: #333;
     margin-bottom: 0.5rem;
     font-weight: bold;
+    transition: text-decoration 0.3s;
 }
 
 .share-options .share-links a:hover {
@@ -144,9 +159,10 @@ main .bottom-sec {
 /* Footer styles */
 footer {
     background-color: #ffffff;
-    padding: 10px 20px;
+    padding: 20px;
     margin-top: 20px;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 footer p {
@@ -156,6 +172,8 @@ footer p {
 
 footer ul {
     list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 footer ul li {
@@ -166,8 +184,45 @@ footer ul li {
 footer ul li a {
     text-decoration: none;
     color: #333333;
+    transition: color 0.3s;
 }
 
 footer ul li a:hover {
     color: #007bff;
+}
+
+/* Form styles */
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #0056b3;
 }

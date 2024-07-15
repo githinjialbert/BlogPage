@@ -63,11 +63,11 @@
             </div>
         </section>
         <form action="includes/blog_contr.inc.php" method="post">
-            <label for="username">Username</label>
+            <label for="username"><b>Username</b></label>
             <input type="text" name="username" placeholder="Username" required>
-            <label for="email">Email</label>
+            <label for="email"><b>Email</b></label>
             <input type="email" name="email" placeholder="Email" required>
-            <label for="comments">Comments</label>
+            <label for="comments"><b>Comments</b></label>
             <textarea id="comments" name="comments" cols="50" rows="5"></textarea>
             <br>
             <button type="submit">Submit</button>
