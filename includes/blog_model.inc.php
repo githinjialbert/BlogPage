@@ -23,11 +23,26 @@ class MyBlogModel {
 
         try {
 
-            $stmt = $this->connection->prepare("INSERT INTO ");  
+            $this->connection->beginTransactions();
 
-        } catch (\Throwable $th) {
-            //throw $th;
+            $stmt = $this->connection->prepare("INSERT INTO bloginfo(username, email) VALUES(:username, :email);");
+            $stmt->bindParam(":username", $username);
+            $stmt->bindParam(":email", $email);
+            $stmt->execute();
+            
+            $user_id = $this->connection->lastInsertId();
+
+            $stmt = $this->connection->prepare("INSERT INTO comments(comment_text) VALUES(:comment_text);");
+            $stmt->bindParam(":comment_text", $comment_text);
+            $stmt->execute();
+
+            $this->connection->commit();
+
+        } catch (PDOException $e) {
+            throw new Exception("Failed to submit information: " . $e->getMessage());
         }
+
+
 
     }
 
