@@ -42,8 +42,6 @@ class MyBlogModel {
             throw new Exception("Failed to submit information: " . $e->getMessage());
         }
 
-
-
     }
 
 }

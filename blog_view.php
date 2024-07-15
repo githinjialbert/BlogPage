@@ -62,7 +62,7 @@
                 </a>
             </div>
         </section>
-        <form action="includes/blog_model.inc.php" method="post">
+        <form action="includes/blog_contr.inc.php" method="post">
             <label for="username"><b>Username</b></label>
             <input type="text" name="username" placeholder="Username" required>
             <label for="email"><b>Email</b></label>
