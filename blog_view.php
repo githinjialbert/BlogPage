@@ -63,6 +63,10 @@
             </div>
         </section>
         <form action="includes/blog_contr.inc.php" method="post">
+            <label for="username">Username</label>
+            <input type="text" name="username" placeholder="Username" required>
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="Email" required>
             <label for="comments">Comments</label>
             <textarea id="comments" name="comments" cols="50" rows="5"></textarea>
             <br>
