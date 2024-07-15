@@ -62,13 +62,13 @@
                 </a>
             </div>
         </section>
-        <form action="includes/blog_contr.inc.php" method="post">
+        <form action="includes/blog_model.inc.php" method="post">
             <label for="username"><b>Username</b></label>
             <input type="text" name="username" placeholder="Username" required>
             <label for="email"><b>Email</b></label>
             <input type="email" name="email" placeholder="Email" required>
             <label for="comments"><b>Comments</b></label>
-            <textarea id="comments" name="comments" cols="50" rows="5"></textarea>
+            <textarea id="comments" name="comment_text" cols="50" rows="5"></textarea>
             <br>
             <button type="submit">Submit</button>
         </form>

@@ -19,6 +19,16 @@ class MyBlogModel {
         }
     }
 
-    public function 
+    public function takeUserInfo($username, $email, $comment_text) {
+
+        try {
+
+            $stmt = $this->connection->prepare("INSERT INTO ");  
+
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
+
+    }
 
 }
