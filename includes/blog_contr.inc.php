@@ -33,9 +33,7 @@ class BlogControl {
                 // Call the method to handle comment submission
                 if ($this->master->takeUserInfo($username, $email, $comment_text)) {
                     echo "Thanks for your feedback. We'll reach out as soon as possible.";
-                } else {
-                    throw new Exception("There was an error in submitting your feedback.");
-                }
+                } 
             } catch (PDOException $e) {
                 throw new Exception("An error occurred. Your information could not be submitted successfully.");
             }
